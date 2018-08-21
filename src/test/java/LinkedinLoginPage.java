@@ -27,7 +27,7 @@ import static java.lang.Thread.sleep;
             userPasswordField.sendKeys(userPass);
             signInButton.click();
             try {
-                sleep(3000);
+                sleep(12000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
