@@ -25,6 +25,10 @@ public class LinkedinSearchPage extends BasePage {
                 && getCurrentPageUrl().contains("/search/results/");
     }
 
+    public LinkedinHomePage loginReturnHomePage(String s, String art0931531661) {
+        return null;
+    }
+
     public int getSearchResultsCount() {
         return searchResults.size();
 

@@ -28,6 +28,10 @@ public class LinkedinHomePage extends BasePage {
                     && getCurrentPageUrl().contains("/feed/");
         }
 
+    public LinkedinHomePage loginReturnHomePage(String s, String art0931531661) {
+        return null;
+    }
+
     public LinkedinSearchPage search(String searchTerm) {
             searchField.sendKeys(searchTerm);
             searchField.sendKeys(Keys.ENTER);

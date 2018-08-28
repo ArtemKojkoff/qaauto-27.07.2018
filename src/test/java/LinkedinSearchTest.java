@@ -34,7 +34,7 @@ public class LinkedinSearchTest {
 
         Assert.assertTrue(linkedinSearchPage.isLoaded(), "Search page is not loaded");
 
-        Assert.assertEquals(linkedinSearchPage.getSearchResultsCount(),10,"Search results count is wrong.");
+        Assert.assertEquals(linkedinSearchPage.getCurrentPageTitle(),"Title is incorrect");
 
 
 

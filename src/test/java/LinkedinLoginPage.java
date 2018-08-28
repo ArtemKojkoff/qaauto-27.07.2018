@@ -8,6 +8,7 @@ import static java.lang.Thread.sleep;
 
 
     public class LinkedinLoginPage extends BasePage {
+
         @FindBy(xpath = "//input[@id='login-email']")
         private WebElement userEmailField;
 
@@ -16,6 +17,9 @@ import static java.lang.Thread.sleep;
 
         @FindBy(xpath = "//input[@id='login-submit']")
         private WebElement signInButton;
+
+        @FindBy(xpath = "//a[@class='link-forgot-password']")
+        private WebElement buttomResetPassword;
 
         public LinkedinLoginPage(WebDriver browser) {
             this.browser = browser;
@@ -34,33 +38,22 @@ import static java.lang.Thread.sleep;
             return new LinkedinLoginSubmitPage(browser);
         }
 
-        public LinkedinHomePage loginReturnHomePage(String userEmail, String userPass) {
-            userEmailField.sendKeys(userEmail);
-            userPasswordField.sendKeys(userPass);
-            signInButton.click();
-            try {
-                sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            return new LinkedinHomePage(browser);
-        }
-
-        public LinkedinLoginPage loginReturnLoginPage(String userEmail, String userPass) {
-            userEmailField.sendKeys(userEmail);
-            userPasswordField.sendKeys(userPass);
-            signInButton.click();
-            try {
-                sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            return new LinkedinLoginPage(browser);
-        }
 
         public boolean isLoaded() {
-            return userEmailField.isDisplayed()
-                    && getCurrentPageTitle().contains("LinkedIn: Log In or Sign Up");
+            return false;
+        }
+
+        public LinkedinHomePage loginReturnHomePage(String s, String art0931531661) {
+            return null;
+        }
+
+        public void loginReturnLoginPage(String userEmail, String userPass) {
+        }
+
+        public LinkedinResertPasswardPage clickOnForgortPassword() {
+            buttomResetPassword.click();
+            return new LinkedinResertPasswardPage(browser);
+
         }
     }
 

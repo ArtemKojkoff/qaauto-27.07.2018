@@ -1,10 +1,10 @@
 import org.openqa.selenium.WebDriver;
+import util.GMailService;
 
 
-
-
-    public abstract class BasePage {
+public abstract class BasePage {
         protected WebDriver browser;
+    protected GMailService gMailService;
 
         public String getCurrentPageTitle() {
             return browser.getTitle();
@@ -15,6 +15,9 @@ import org.openqa.selenium.WebDriver;
         }
 
         public abstract boolean isLoaded();
+
+
+        public abstract LinkedinHomePage loginReturnHomePage(String s, String art0931531661);
 
 
     }

@@ -35,6 +35,10 @@ import org.openqa.selenium.WebElement;
                     && getCurrentPageUrl().contains("/uas/login-submit");
         }
 
+        public LinkedinHomePage loginReturnHomePage(String s, String art0931531661) {
+            return null;
+        }
+
         public String getUserEmailValidationText() {
             return userEmailValidationText.getText();
         }
