@@ -1,9 +1,11 @@
+package page;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LinkedinChangePasswordPage extends BasePage {
+public class LinkedinSetNewPasswordPage extends BasePage {
 
     @FindBy(xpath = "//input[@placeholder='Новый пароль']")
     private WebElement newPassword;
@@ -14,7 +16,7 @@ public class LinkedinChangePasswordPage extends BasePage {
     @FindBy(xpath = "//*[@class='form__submit form__submit--stretch']")
     private WebElement sendButton;
 
-    public LinkedinChangePasswordPage(WebDriver browser) {
+    public LinkedinSetNewPasswordPage(WebDriver browser) {
         this.browser = browser;
         PageFactory.initElements(browser, this);
     }
@@ -27,7 +29,7 @@ public class LinkedinChangePasswordPage extends BasePage {
     }
 
 
-    public LinkedinChangePasswordPage() {
+    public LinkedinSetNewPasswordPage() {
 
     }
 
